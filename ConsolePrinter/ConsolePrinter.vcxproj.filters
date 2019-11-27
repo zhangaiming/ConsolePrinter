@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ConsolePrinter">
+      <UniqueIdentifier>{acbc4c31-ecd7-4458-bdfb-7c9f4224c792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector">
+      <UniqueIdentifier>{8b58f49b-33ec-4f4f-930e-9e5ad6ae9f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Role">
+      <UniqueIdentifier>{33d465fe-52bd-4fbe-b23d-8c9307ef99d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventory">
+      <UniqueIdentifier>{88f6897c-b1df-4a48-a3ae-adbeeba113c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventory\Item">
+      <UniqueIdentifier>{fb1ce998-ba35-44ae-905c-25495e248d06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventory\Item\Items">
+      <UniqueIdentifier>{160c2748-3637-4688-bd79-741ebb83d7a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buff">
+      <UniqueIdentifier>{686caf2c-28f1-4346-b35b-5666d27535c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buff\Buffs">
+      <UniqueIdentifier>{6b96cb9e-1060-4cf2-84fb-2f7c8191df7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect">
+      <UniqueIdentifier>{43109445-eb68-46e1-96c3-dbe74523e94d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill">
+      <UniqueIdentifier>{159f9a6b-2ed5-443a-9830-4719668b3de2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill\Skills">
+      <UniqueIdentifier>{1f913f25-272b-4620-9b48-e3a5e2cbcc69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fight">
+      <UniqueIdentifier>{0d417c62-21db-4936-b35b-59073ebbb92d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ConsolePrinter.cpp">
+      <Filter>ConsolePrinter</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="EffectManager.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Role.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="Attribute.cpp">
+      <Filter>Role</Filter>
+    </ClCompile>
+    <ClCompile Include="Buff.cpp">
+      <Filter>Buff</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffManager.cpp">
+      <Filter>Buff</Filter>
+    </ClCompile>
+    <ClCompile Include="Buffs.cpp">
+      <Filter>Buff\Buffs</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Inventory\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemStack.cpp">
+      <Filter>Inventory\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Items.cpp">
+      <Filter>Inventory\Item\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Skill.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillManager.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Skills.cpp">
+      <Filter>Skill\Skills</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vector.h">
+      <Filter>Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsolePrinter.h">
+      <Filter>ConsolePrinter</Filter>
+    </ClInclude>
+    <ClInclude Include="Role.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="Attribute.h">
+      <Filter>Role</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectManager.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Buff.h">
+      <Filter>Buff</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffManager.h">
+      <Filter>Buff</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffs.h">
+      <Filter>Buff\Buffs</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Inventory\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemStack.h">
+      <Filter>Inventory\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Items.h">
+      <Filter>Inventory\Item\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillManager.h">
+      <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills.h">
+      <Filter>Skill\Skills</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
