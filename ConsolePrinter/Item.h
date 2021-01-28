@@ -1,5 +1,4 @@
 #pragma once
-#include "Effect.h"
 
 class Role;
 
@@ -11,7 +10,7 @@ public:
 	const int maxStack;	//最大堆叠数量
 
 public:
-	Item(const char* _name, const char* _description, int _maxStack);
+	Item(const char* _name, const char* _description, int _maxStack = 1);
 	char* GetName();
 	char* GetDesc();
 

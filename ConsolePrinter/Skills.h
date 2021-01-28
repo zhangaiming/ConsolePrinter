@@ -1,10 +1,9 @@
 #pragma once
-
-
-class Skill;
+#include "Skill.h"
+class Role;
 
 class FireUp : public Skill{
 public:
-	string* Apply(Role* applier, Role* target);
 	FireUp();
+	string Apply(Role* applier, Role* target);
 };

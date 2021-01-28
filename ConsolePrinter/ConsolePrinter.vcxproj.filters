@@ -1,15 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="ConsolePrinter">
       <UniqueIdentifier>{acbc4c31-ecd7-4458-bdfb-7c9f4224c792}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Vector">
-      <UniqueIdentifier>{8b58f49b-33ec-4f4f-930e-9e5ad6ae9f0f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Role">
       <UniqueIdentifier>{33d465fe-52bd-4fbe-b23d-8c9307ef99d6}</UniqueIdentifier>
@@ -36,10 +29,85 @@
       <UniqueIdentifier>{159f9a6b-2ed5-443a-9830-4719668b3de2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Skill\Skills">
-      <UniqueIdentifier>{1f913f25-272b-4620-9b48-e3a5e2cbcc69}</UniqueIdentifier>
+      <UniqueIdentifier>{4a0c21d9-310b-412f-9fe9-967fa0051f11}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fight">
-      <UniqueIdentifier>{0d417c62-21db-4936-b35b-59073ebbb92d}</UniqueIdentifier>
+      <UniqueIdentifier>{35aea659-8380-46ef-af2a-8707165d34f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Role\Player">
+      <UniqueIdentifier>{e64e5486-48bc-4b6d-b9cc-e48a69f85e6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Role\Monster">
+      <UniqueIdentifier>{0e5467f2-e36c-4a77-9816-f49dc9f6f796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConsolePrinter\Vector">
+      <UniqueIdentifier>{8b58f49b-33ec-4f4f-930e-9e5ad6ae9f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{7ae80124-1fcf-49aa-a0b8-f2aa88cf6d35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Widget">
+      <UniqueIdentifier>{1b08ca20-8d54-4fb8-b209-5e897cdc3e21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Widget\Button">
+      <UniqueIdentifier>{a4037467-531e-49b4-8c0d-ab08c0b69320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Widget\ButtonGroup">
+      <UniqueIdentifier>{ca3b902d-8452-4024-b450-017dd009d5ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Widget\Selectable">
+      <UniqueIdentifier>{4a669e32-5a4b-4444-ab3a-5a26b4a7a257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CursorControler">
+      <UniqueIdentifier>{4eaca7bf-dbda-4699-a65f-c747777c7da4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Widget\TextBox">
+      <UniqueIdentifier>{618b352c-6a78-4460-9412-138dec30feea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level">
+      <UniqueIdentifier>{6e18f125-310f-4c3c-9f2e-0a64f6173425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Levels">
+      <UniqueIdentifier>{624c0746-859c-4059-a2a9-76d0af5cc47c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Levels\BeginMenu">
+      <UniqueIdentifier>{7d8264e4-287c-46bd-abb7-30658076a5b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Levels\NewGame">
+      <UniqueIdentifier>{42de7045-68b1-4209-b804-5c7858fe1df4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Levels\MainLevel">
+      <UniqueIdentifier>{99c17ead-4e6d-4edc-abed-55c1dd32d4de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Widget\Label">
+      <UniqueIdentifier>{51c62cd3-f9a1-4480-b966-b7768e2109e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StringTool">
+      <UniqueIdentifier>{6d6a4844-3dba-4248-8901-8e9edb97db11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Widget\List">
+      <UniqueIdentifier>{ee69ebb4-14ab-48eb-bfbf-163dbb68298e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Levels\MainLevel\InvMenu">
+      <UniqueIdentifier>{cf50c42a-aecc-4dee-89ea-24925c1eff97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventory\Item\Equipment">
+      <UniqueIdentifier>{e52eb596-026e-47d8-b5db-efc1eb3a9980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventory\Item\Equipment\Equipments">
+      <UniqueIdentifier>{43b6a169-3299-4759-aa87-ebfa66088443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Levels\MainLevel\EqpMenu">
+      <UniqueIdentifier>{c074c59e-82af-4a69-8acf-626cb14cb96e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Levels\MainLevel\AttMenu">
+      <UniqueIdentifier>{91b41596-50d0-4e93-835d-038078eedc31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NGUI">
+      <UniqueIdentifier>{7d7fcd13-a73e-46db-85b9-728861111f7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NGUI\NWidget">
+      <UniqueIdentifier>{06803a92-19eb-440b-bdc7-d8097ee5777c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -47,7 +115,7 @@
       <Filter>ConsolePrinter</Filter>
     </ClCompile>
     <ClCompile Include="Vector.cpp">
-      <Filter>Vector</Filter>
+      <Filter>ConsolePrinter\Vector</Filter>
     </ClCompile>
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="EffectManager.cpp">
@@ -92,10 +160,84 @@
     <ClCompile Include="Skills.cpp">
       <Filter>Skill\Skills</Filter>
     </ClCompile>
+    <ClCompile Include="Fighter.cpp">
+      <Filter>Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="Fight.cpp">
+      <Filter>Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="FightManager.cpp">
+      <Filter>Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Role\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Widget.cpp">
+      <Filter>UI\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>UI\Widget\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonGroup.cpp">
+      <Filter>UI\Widget\ButtonGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetManager.cpp">
+      <Filter>UI\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="CursorControler.cpp">
+      <Filter>CursorControler</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>UI\Widget\TextBox</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Screen.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInstance.cpp" />
+    <ClCompile Include="BeginMenu.cpp">
+      <Filter>Level\Levels\BeginMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="NewGame.cpp">
+      <Filter>Level\Levels\NewGame</Filter>
+    </ClCompile>
+    <ClCompile Include="MainLevel.cpp">
+      <Filter>Level\Levels\MainLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>UI\Widget\List</Filter>
+    </ClCompile>
+    <ClCompile Include="StringTool.cpp">
+      <Filter>StringTool</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>UI\Widget\Label</Filter>
+    </ClCompile>
+    <ClCompile Include="InvMenu.cpp">
+      <Filter>Level\Levels\MainLevel\InvMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="Equipment.cpp">
+      <Filter>Inventory\Item\Equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="EquipmentBar.cpp">
+      <Filter>Inventory\Item\Equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="Equipments.cpp">
+      <Filter>Inventory\Item\Equipment\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="EqpMenu.cpp">
+      <Filter>Level\Levels\MainLevel\EqpMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="AttMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector.h">
-      <Filter>Vector</Filter>
+      <Filter>ConsolePrinter\Vector</Filter>
     </ClInclude>
     <ClInclude Include="ConsolePrinter.h">
       <Filter>ConsolePrinter</Filter>
@@ -141,6 +283,91 @@
     </ClInclude>
     <ClInclude Include="Skills.h">
       <Filter>Skill\Skills</Filter>
+    </ClInclude>
+    <ClInclude Include="Fighter.h">
+      <Filter>Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="FightManager.h">
+      <Filter>Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight.h">
+      <Filter>Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Role\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Widget.h">
+      <Filter>UI\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>UI\Widget\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonGroup.h">
+      <Filter>UI\Widget\ButtonGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="Selectable.h">
+      <Filter>UI\Widget\Selectable</Filter>
+    </ClInclude>
+    <ClInclude Include="WidgetManager.h">
+      <Filter>UI\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorControler.h">
+      <Filter>CursorControler</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_DEF.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>UI\Widget\TextBox</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Screen.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInstance.h" />
+    <ClInclude Include="BeginMenu.h">
+      <Filter>Level\Levels\BeginMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="NewGame.h">
+      <Filter>Level\Levels\NewGame</Filter>
+    </ClInclude>
+    <ClInclude Include="MainLevel.h">
+      <Filter>Level\Levels\MainLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>UI\Widget\Label</Filter>
+    </ClInclude>
+    <ClInclude Include="StringTool.h">
+      <Filter>StringTool</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>UI\Widget\List</Filter>
+    </ClInclude>
+    <ClInclude Include="InvMenu.h">
+      <Filter>Level\Levels\MainLevel\InvMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Equipment.h">
+      <Filter>Inventory\Item\Equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipmentBar.h">
+      <Filter>Inventory\Item\Equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="Equipments.h">
+      <Filter>Inventory\Item\Equipment\Equipments</Filter>
+    </ClInclude>
+    <ClInclude Include="EqpMenu.h">
+      <Filter>Level\Levels\MainLevel\EqpMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="AttMenu.h">
+      <Filter>Level\Levels\MainLevel\AttMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="WidgetBase.h">
+      <Filter>NGUI\NWidget</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

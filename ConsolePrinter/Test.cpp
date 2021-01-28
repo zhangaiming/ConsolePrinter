@@ -1,16 +1,61 @@
 #include <Windows.h>
 #include <iostream>
 
-#include "Role.h"
-#include "Skills.h"
+#include "GameInstance.h"
+
+#include <conio.h>
+#include <thread>
 
 using namespace std;
 
-
-
 int main() {
-	
+	GameInstance* gameInstance = GameInstance::GetInstance();
+	gameInstance->Begin();
+	return 0;
 }
+
+//void UIPrintTest() {
+//	ButtonGroup* group = new ButtonGroup();
+//	group->AttachSelection(new Button("按钮1", Vector2(0, 0), []() { cout << "按钮1被按下!"; }));
+//	group->AttachSelection(new Button("按钮2", Vector2(0, 1), []() { cout << "按钮2被按下!"; }));
+//	WidgetManager::Attach(group);
+//	UIPrinter::Refresh();
+//
+//	group->Next();
+//	UIPrinter::Refresh();
+//}
+
+//void SkillTest() {
+//	Role* a = new Role(10, new string("啊啊啊"));
+//	Role* b = new Role(10, new string("target"));
+//	SkillManager* manager = new SkillManager(a);
+//	string result = string();
+//	if ((result = manager->ApplySkill(new FireUp(), b)) != "")
+//		cout << result;
+//	else
+//		cout << "NULL";
+//	cout << endl;
+//	manager->LearnSkill(new FireUp());
+//
+//	if ((result = manager->ApplySkill(new FireUp(), b)) != "")
+//		cout << result;
+//	else
+//		cout << "NULL";
+//	cout << endl;
+//
+//	manager->RemoveSkill(new FireUp());
+//	if ((result = manager->ApplySkill(new FireUp(), b)) != "")
+//		cout << result;
+//	else
+//		cout << "NULL";
+//	cout << endl;
+//
+//	if ((result = manager->ApplySkill(new FireUp(), b)) != "")
+//		cout << result;
+//	else
+//		cout << "NULL";
+//	cout << endl;
+//}
 
 //void SkillTest() {
 //	Role* role = new Role(10);

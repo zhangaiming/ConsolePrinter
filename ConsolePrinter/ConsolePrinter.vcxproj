@@ -38,6 +38,7 @@
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -77,6 +78,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -101,6 +103,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,41 +127,96 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AttMenu.cpp" />
     <ClCompile Include="Attribute.cpp" />
+    <ClCompile Include="BeginMenu.cpp" />
     <ClCompile Include="Buff.cpp" />
     <ClCompile Include="BuffManager.cpp" />
     <ClCompile Include="Buffs.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ButtonGroup.cpp" />
     <ClCompile Include="ConsolePrinter.cpp" />
+    <ClCompile Include="CursorControler.cpp" />
     <ClCompile Include="Effect.cpp" />
     <ClCompile Include="EffectManager.cpp" />
+    <ClCompile Include="EqpMenu.cpp" />
+    <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="EquipmentBar.cpp" />
+    <ClCompile Include="Equipments.cpp" />
+    <ClCompile Include="Fight.cpp" />
+    <ClCompile Include="Fighter.cpp" />
+    <ClCompile Include="FightManager.cpp" />
+    <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="InvMenu.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="ItemStack.cpp" />
+    <ClCompile Include="Label.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
+    <ClCompile Include="List.cpp" />
+    <ClCompile Include="MainLevel.cpp" />
+    <ClCompile Include="NewGame.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Role.cpp" />
+    <ClCompile Include="Screen.cpp" />
     <ClCompile Include="Skill.cpp" />
     <ClCompile Include="SkillManager.cpp" />
     <ClCompile Include="Skills.cpp" />
+    <ClCompile Include="StringTool.cpp" />
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="Widget.cpp" />
+    <ClCompile Include="WidgetManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AttMenu.h" />
     <ClInclude Include="Attribute.h" />
+    <ClInclude Include="BeginMenu.h" />
     <ClInclude Include="Buff.h" />
     <ClInclude Include="BuffManager.h" />
     <ClInclude Include="Buffs.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="ConsolePrinter.h" />
+    <ClInclude Include="CursorControler.h" />
     <ClInclude Include="Effect.h" />
     <ClInclude Include="EffectManager.h" />
+    <ClInclude Include="EqpMenu.h" />
+    <ClInclude Include="EquipmentBar.h" />
+    <ClInclude Include="Equipment.h" />
+    <ClInclude Include="Equipments.h" />
+    <ClInclude Include="Fight.h" />
+    <ClInclude Include="Fighter.h" />
+    <ClInclude Include="FightManager.h" />
+    <ClInclude Include="ButtonGroup.h" />
+    <ClInclude Include="GameInstance.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="InvMenu.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Items.h" />
     <ClInclude Include="ItemStack.h" />
+    <ClInclude Include="Label.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelManager.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="MainLevel.h" />
+    <ClInclude Include="NewGame.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Role.h" />
+    <ClInclude Include="Screen.h" />
+    <ClInclude Include="Selectable.h" />
     <ClInclude Include="Skill.h" />
     <ClInclude Include="SkillManager.h" />
     <ClInclude Include="Skills.h" />
+    <ClInclude Include="StringTool.h" />
+    <ClInclude Include="TextBox.h" />
+    <ClInclude Include="UI_DEF.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="Widget.h" />
+    <ClInclude Include="WidgetBase.h" />
+    <ClInclude Include="WidgetManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

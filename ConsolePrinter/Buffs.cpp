@@ -6,7 +6,7 @@
 
 void BurntBuff::OnApply(Role* role)
 {
-	intensity = (float)role->GetAttribute()->GetMaxHP() * 0.05;
+	intensity = (float)role->GetAttribute()->GetMaxHP() * 0.05f;
 	Effect* effect = new Effect(EffectType::PLUS_CURHP, -intensity);
 	role->ApplyEffect(effect);
 }

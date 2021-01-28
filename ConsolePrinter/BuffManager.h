@@ -6,8 +6,6 @@ using namespace std;
 
 typedef list<Buff*> BUFFLIST;
 
-class Role;
-
 class BuffManager {
 	Role* parent;
 	BUFFLIST buffList;	//buff¡–±Ì

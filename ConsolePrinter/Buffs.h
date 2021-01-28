@@ -1,8 +1,6 @@
 #pragma once
 #include "Buff.h"
 
-class Role;
-
 class BurntBuff :public Buff {
 private:
 	float intensity;

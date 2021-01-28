@@ -74,6 +74,45 @@ bool Inventory::AddItemStack(ItemStack* stack)
 	return false;
 }
 
+bool Inventory::DropItem(Item* item, int amount)
+{
+	int a = GetAmountOf(item);
+	if (a > 0) {
+		int i = 0;
+		while (i++ < GetCapacity() && amount > 0) {
+			ItemStack* temp = GetStackAt(i);
+			if (temp->item == item) {
+				if (temp->GetAmount() < temp->item->maxStack) {
+					if (amount >= temp->GetAmount()) {
+						amount -= temp->GetAmount();
+						temp->SetAmount(0);
+					}
+					else {
+						temp->AddAmount(-amount);
+						amount -= temp->GetAmount();
+					}
+					break;
+				}
+				else {
+					if (amount >= temp->GetAmount()) {
+						amount -= temp->GetAmount();
+						temp->SetAmount(0);
+					}
+					else {
+						temp->AddAmount(-amount);
+						amount -= temp->GetAmount();
+					}
+				}
+			}
+		}
+
+		Sort();
+		if (amount > 0)
+			return true;
+	}
+	return false;
+}
+
 ItemStack* Inventory::GetStackAt(int index)
 {
 	Check();
@@ -116,7 +155,7 @@ int Inventory::GetCapacity()
 void Inventory::Check()
 {
 	for (list<ItemStack*>::iterator iter = itemStacks.begin(); iter != itemStacks.end(); ) {
-		if ((*iter)->GetAmount() == 0)
+		if ((*iter)->GetAmount() == 0 || (*iter) == nullptr)
 			itemStacks.erase(iter++);
 		else
 			iter++;

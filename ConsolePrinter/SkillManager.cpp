@@ -1,93 +1,64 @@
 #include "SkillManager.h"
-#include "Role.h"
-#include "Skill.h"
 
-SkillManager::SkillManager(Role* role, int _capacity)
+SkillManager::SkillManager(Role* _owner)
 {
-	owner = role;
-	capacity = _capacity;
+	owner = _owner;
 }
 
-bool SkillManager::Attach(Skill* target)
+string SkillManager::ApplySkill(Skill* skill, Role* target)
 {
-	if (skillList.size() < capacity && GetIndexOf(target) == -1) {
-		//如果列表还有空位, 且没有该技能
-		skillList.push_back(target);
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-bool SkillManager::Detach(Skill* target)
-{
-	int i = GetIndexOf(target);
-	if (i != -1) {
-		//如果列表中有该技能
-		SKILLLIST::iterator iter = skillList.begin();
-		while (i--)
-			iter++;
-		skillList.erase(iter);
-		return true;
-	}
-	return false;
+	if (GetIndexOf(skill) != -1) {
+		return skill->Apply(owner, target);
+	}else
+		return "";
 }
 
 Skill* SkillManager::GetSkillAt(int index)
 {
-	SKILLLIST::iterator iter = skillList.begin();
-
-	if (index >= skillList.size())
-		return nullptr;
-
-	while (index--)
-		iter++;
-
-	return *iter;
+	int i = 0;
+	for (SKILLLIST::iterator iter = skillList.begin(); iter != skillList.end(); iter++) {
+		if (index == i) {
+			return (*iter);
+		}
+		else {
+			i++;
+			continue;
+		}
+	}
+	return nullptr;
 }
 
 int SkillManager::GetIndexOf(Skill* target)
 {
-	int result = -1;
 	int i = 0;
-	if (skillList.size() != 0) {
-		for (SKILLLIST::iterator iter = skillList.begin(); iter != skillList.end(); iter++) {
+	for (; i < skillList.size(); i++) {
+		if (GetSkillAt(i)->EqualsTo(target)) {
+			return i;
+		}
+	}
+	return -1;	//没有这个技能,返回-1
+}
+
+bool SkillManager::RemoveSkill(Skill* target)
+{
+	if (GetIndexOf(target) != -1) {
+		for (SKILLLIST::iterator iter = skillList.begin(); iter != skillList.end(); ) {
 			if ((*iter)->EqualsTo(target)) {
-				result = i;
-			}
-			else {
-				i++;
+				skillList.erase(iter++);
+				return true;
 			}
 		}
 	}
-
-	return result;
+	else
+		return false;
 }
 
-string* SkillManager::Apply(Skill* skill, Role* applier, Role* target)
+bool SkillManager::LearnSkill(Skill* target)
 {
-	int skill_accuracy = skill->GetAccuracy();
-	int mana_consume = skill->GetConsume();
-	srand((unsigned int)time_t(NULL));
-	if (mana_consume > target->GetAttribute()->GetCurMM()) {
-		if (GetIndexOf(skill) != -1) {
-			if ((rand() % 100) > (100 - skill_accuracy)) {
-				//成功
-				//实施技能
-				return skill->Apply(applier, target);
-			}
-		}
+	if(GetIndexOf(target) != -1)
+		return false;
+	else {
+		skillList.push_back(target);
+		return true;
 	}
-}
-
-string* SkillManager::Apply(int index, Role* applier, Role* target)
-{
-
-	Skill* skill = GetSkillAt(index);
-	if (skill == nullptr) {
-		return -1;
-	}
-	
-	return Apply(skill, applier, target);
 }

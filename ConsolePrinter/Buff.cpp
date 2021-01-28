@@ -1,5 +1,4 @@
 #include "Buff.h"
-#include "Role.h"
 
 Buff::Buff(int _turns)
 {

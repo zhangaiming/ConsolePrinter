@@ -2,6 +2,7 @@
 #include "Vector.h"
 #include <Windows.h>
 #include "ConsolePrinter.h"
+#include "UI_DEF.h"
 
 WORD GetDefaultConsoleColor();
 
@@ -17,63 +18,46 @@ WORD GetDefaultConsoleColor() {
 
 void ConsolePrinter::Print(const Vector2& pos, const char* c, const Color& fore, const Color& back)
 {
-	SetColor(Colors(fore, back));
-	GoTo(pos);
-	std::cout << c;
-	ResetColor();
+	if (pos.x >= 0 && pos.x < SCREENSIZE_HOR && pos.y >= 0 && pos.y < SCREENSIZE_VER) {
+		SetColor(Colors(fore, back));
+		GoTo(pos);
+		std::cout << c;
+		ResetColor();
+	}
 }
 
-void ConsolePrinter::Print(const Vector2& pos, const char* c, const Colors& color)
+/*void ConsolePrinter::Print(const Vector2& pos, const char* c, const Colors& color)
 {
-	SetColor(color);
-	GoTo(pos);
-	std::cout << c;
-	ResetColor();
+	if (pos.x >= 0 && pos.x < SCREENSIZE_HOR && pos.y >= 0 && pos.y < SCREENSIZE_VER) {
+		SetColor(color);
+		GoTo(pos);
+		std::cout << c;
+		ResetColor();
+	}
+}*/
+
+void ConsolePrinter::PrintHorLine(const char* c, const Vector2& beginPos, const int length, const Color& fore, const Color& back)
+{
+	for (int i = 0; i < length; i++) {
+		Print(Vector2(beginPos.x + i, beginPos.y), c, fore, back);
+	}
 }
 
-void ConsolePrinter::Print(const char* c, const Color& fore, const Color& back)
+void ConsolePrinter::PrintVerLine(const char* c, const Vector2& beginPos, const int length, const Color& fore, const Color& back)
 {
-	SetColor(Colors(fore, back));
-	std::cout << c;
-	ResetColor();
+	for (int i = 0; i < length; i++) {
+		Print(Vector2(beginPos.x, beginPos.y + i), c, fore, back);
+	}
 }
 
-void ConsolePrinter::Print(const char* c, const Colors& color)
+void ConsolePrinter::PrintRectangle(const char* c, const Vector2& pos, int hor, int ver, const Color& fore, const Color& back)
 {
-	SetColor(color);
-	std::cout << c;
-	ResetColor();
+	PrintHorLine(c, pos, hor, fore, back);
+	PrintVerLine(c, pos, ver, fore, back);
+	PrintHorLine(c, Vector2(pos.x, pos.y + ver - 1), hor, fore, back);
+	PrintVerLine(c, Vector2(pos.x + hor - 1, pos.y), ver, fore, back);
 }
 
-void ConsolePrinter::PrintLine(const Vector2& pos, const char* c, const Color& fore, const Color& back)
-{
-	SetColor(Colors(fore, back));
-	GoTo(pos);
-	std::cout << c << std::endl;
-	ResetColor();
-}
-
-void ConsolePrinter::PrintLine(const Vector2& pos, const char* c, const Colors& color)
-{
-	SetColor(color);
-	GoTo(pos);
-	std::cout << c << std::endl;
-	ResetColor();
-}
-
-void ConsolePrinter::PrintLine(const char* c, const Color& fore, const Color& back)
-{
-	SetColor(Colors(fore, back));
-	std::cout << c << std::endl;
-	ResetColor();
-}
-
-void ConsolePrinter::PrintLine(const char* c, const Colors& color)
-{
-	SetColor(color);
-	std::cout << c << std::endl;
-	ResetColor();
-}
 void ConsolePrinter::GoTo(const Vector2& pos)
 {
 	COORD coord = { (SHORT)pos.x,(SHORT)pos.y };

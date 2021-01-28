@@ -1,4 +1,14 @@
 #include "Attribute.h"
+#include "Role.h"
+
+Attribute::Attribute(int _maxHP, int _ATK, int _DEF, int _SPD, int _maxMM)
+{
+	curHP = maxHP = _maxHP;
+	ATK = _ATK;
+	DEF = _DEF;
+	SPD = _SPD;
+	curMM = maxMM = _maxMM;
+}
 
 void Attribute::SetCurHP(int num)
 {

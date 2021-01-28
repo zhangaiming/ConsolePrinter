@@ -1,9 +1,5 @@
 #pragma once
-#include "Effect.h"
-
 class Role;
-
-class Effect;
 
 class Buff {
 protected:

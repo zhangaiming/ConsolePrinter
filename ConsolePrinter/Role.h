@@ -3,8 +3,10 @@
 #include "EffectManager.h"
 #include "BuffManager.h"
 #include "Inventory.h"
-#include "SkillManager.h"
+#include "EquipmentBar.h"
 #include <string>
+
+class BaseAttribute;
 
 class Role {
 private:
@@ -12,17 +14,17 @@ private:
 	EffectManager* effectManager;
 	BuffManager* buffManager;
 	Inventory* inventory;
-	SkillManager* skillManager;
-	string* name;
+	EquipmentBar* equipmentBar;
+	string name;
 
 public:
-	Role(int inv_capacity, string* _name);
+	Role(int inv_capacity, string _name);
 	void ApplyEffect(Effect* effect);
 	void AttachBuff(Buff* buff);
 
 	Attribute* GetAttribute();
 	BUFFLIST* GetBuffList();
 	Inventory* GetInventory();
-	SkillManager* GetSkillManager();
-	string* GetName();
+	EquipmentBar* GetEquipmentBar();
+	string GetName();
 };

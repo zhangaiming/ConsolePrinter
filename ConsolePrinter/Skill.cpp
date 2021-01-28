@@ -1,37 +1,25 @@
 #include "Skill.h"
-#include "Role.h"
 
-Skill::Skill(const char* name, const char* desc, const int consume, const int ac)
+Skill::Skill(const char* _name, const char* _desc, int _consume)
 {
-	displayName = new string(name);
-	description = new string(desc);
-	consumeMM = consume;
-	accuracy = ac;
+	name = new string(_name);
+	description = new string(_desc);
+	consume = _consume;
 }
 
-string* Skill::GetName()
+char* Skill::GetName()
 {
-	return displayName;
+	return (char*)name->data();
 }
 
-string* Skill::GetDesc()
+char* Skill::GetDescription()
 {
-	return description;
+	return (char*)description->data();
 }
 
-int Skill::GetConsume()
+bool Skill::EqualsTo(Skill* target)
 {
-	return consumeMM;
-}
-
-int Skill::GetAccuracy()
-{
-	return accuracy;
-}
-
-bool Skill::EqualsTo(Skill* skill)
-{
-	if (skill->displayName == this->displayName && skill->accuracy == this->accuracy && skill->description == this->description && skill->consumeMM == this->consumeMM)
+	if (target->consume == this->consume && target->description->_Equal(*this->description) && target->name->_Equal(*this->name))
 		return true;
 	return false;
 }

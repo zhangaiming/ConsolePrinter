@@ -1,12 +1,12 @@
 #include "Role.h"
 
-Role::Role(int inv_capacity, string* _name)
+Role::Role(int inv_capacity, string _name)
 {
-	attribute = new Attribute();
+	attribute = new Attribute(20, 5, 5, 5, 20);
 	effectManager = new EffectManager(this);
 	buffManager = new BuffManager(this);
 	inventory = new Inventory(inv_capacity);
-	skillManager = new SkillManager(this, 10);
+	equipmentBar = new EquipmentBar(this);
 	name = _name;
 }
 
@@ -35,13 +35,12 @@ Inventory* Role::GetInventory()
 	return inventory;
 }
 
-SkillManager* Role::GetSkillManager()
+EquipmentBar* Role::GetEquipmentBar()
 {
-	SkillManager* result(skillManager);
-	return result;
+	return equipmentBar;
 }
 
-string* Role::GetName()
+string Role::GetName()
 {
 	return name;
 }

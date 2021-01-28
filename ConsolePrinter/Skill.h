@@ -1,21 +1,20 @@
 #pragma once
-#include "Buffs.h"
 #include <string>
+using namespace std;
+
+class Role;
 
 class Skill {
-	string* displayName;
+private:
+	string* name;
 	string* description;
-	int consumeMM;
-	int accuracy;	//ÃüÖÐÂÊ
+	int consume;
 
 public:
-	virtual string* Apply(Role* applier, Role* target) = 0;
-	Skill(const char* name, const char* desc, const int consume, const int ac);
+	Skill(const char* _name, const char* _desc, int _consume);
+	char* GetName();
+	char* GetDescription();
+	virtual string Apply(Role* applier, Role* target) = 0;
 
-	string* GetName();
-	string* GetDesc();
-	int GetConsume();
-
-	int GetAccuracy();
-	bool EqualsTo(Skill* skill);
+	bool EqualsTo(Skill*);
 };

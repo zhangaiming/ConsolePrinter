@@ -85,17 +85,13 @@ public:
 
 public:
 	//打印字符串,颜色统一
-	static void Print(const Vector2& beginPos, const char* c, const Color& fore, const Color& back);//指定坐标,输入前景和后景
-	static void Print(const Vector2& beginPos, const char* c, const Colors& color);//指定坐标,输入颜色组
-	
-	static void Print(const char* c, const Color& fore, const Color& back);//不指定坐标在当前位置继续输出,输入前景和后景
-	static void Print(const char* c, const Colors& color);//不指定坐标在当前位置继续输出,输入颜色组
+	static void Print(const Vector2& beginPos, const char* c, const Color& fore = Color::DEFAULT, const Color& back = Color::DEFAULT);//指定坐标,输入前景和后景
+	//static void Print(const Vector2& beginPos, const char* c, const Colors& color);//指定坐标,输入颜色组
 
-	static void PrintLine(const Vector2& beginPos, const char* c, const Color& fore, const Color& back);//指定坐标,输入前景和后景,输出后换行
-	static void PrintLine(const Vector2& beginPos, const char* c, const Colors& color);//指定坐标,输入颜色组,输出后换行
+	static void PrintHorLine(const char* c, const Vector2& beginPos, const int length, const Color& fore = Color::DEFAULT, const Color& back = Color::DEFAULT);
+	static void PrintVerLine(const char* c, const Vector2& beginPos, const int length, const Color& fore = Color::DEFAULT, const Color& back = Color::DEFAULT);
 
-	static void PrintLine(const char* c, const Color& fore, const Color& back);//不指定坐标在当前位置继续输出,输入前景和后景,输出后换行
-	static void PrintLine(const char* c, const Colors& color);//不指定坐标在当前位置继续输出,输入颜色组,输出后换行
+	static void PrintRectangle(const char* c, const Vector2& pos, int hor, int ver, const Color& fore = Color::DEFAULT, const Color& back = Color::DEFAULT);
 
 	//设置默认的颜色
 	static void SetDefaultColor(const Color& fore, const Color& back);

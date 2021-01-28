@@ -1,14 +1,13 @@
 #include "Skills.h"
 #include "Role.h"
-#include "Skill.h"
 
-#include <iostream>
-string* FireUp::Apply(Role* applier, Role* target)
+FireUp::FireUp():Skill("火球术", "23333", 10)
 {
-	
+
 }
 
-FireUp::FireUp() :Skill("FireUp", "这个技能叫FireUp", 10, 90)
+string FireUp::Apply(Role* applier, Role* target)
 {
-
+	string result = applier->GetName() + "使用了火球术,对" + target->GetName() + "造成了x点伤害";
+	return result;
 }

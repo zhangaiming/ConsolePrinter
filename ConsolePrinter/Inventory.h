@@ -11,6 +11,7 @@ class Inventory {
 public:
 	bool AddItem(Item*, int);	//向背包中加入相应数量的物品,溢出则返回false
 	bool AddItemStack(ItemStack*);	//向背包中加入物品堆,溢出则返回false
+	bool DropItem(Item*, int);	//移除相应个数的物品
 
 	ItemStack* GetStackAt(int index);	//获取相应位置的物品堆,若超出size则返回一个nullptr
 

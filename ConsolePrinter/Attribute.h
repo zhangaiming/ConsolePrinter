@@ -1,15 +1,19 @@
 #pragma once
 
+class Role;
+
 class Attribute {
-	int curHP = 20;
-	int maxHP = curHP;
-	int ATK = 20;
-	int DEF = 20;
-	int SPD = 20;
-	int curMM = 50;
-	int maxMM = curMM;
+	int curHP;
+	int maxHP;
+	int ATK;
+	int DEF;
+	int SPD;
+	int curMM;
+	int maxMM;
 
 public:
+	Attribute(int _maxHP, int _ATK, int _DEF, int _SPD, int _maxMM);
+
 	void SetCurHP(int);
 	int GetCurHP();
 	void AddCurHP(int);
